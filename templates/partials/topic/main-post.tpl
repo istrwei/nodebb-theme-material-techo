@@ -1,3 +1,11 @@
+<style>
+#browsing-users {
+  position: static;
+  margin-top: 2px;
+}
+</style>
+
+
 <div class="lv-header-alt" component="post/header" itemprop="name">
 
   <!-- BEGIN posts -->
@@ -67,7 +75,7 @@
                   <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
                 </span>
               </span>
-              <ul class="lv-actions actions hidden-xs">
+              <ul class="lv-actions actions hidden-xs" id="browsing-users">
                 <li>
                   <span class="browsing-users">
                     [[category:browsing]]
