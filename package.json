@@ -1,14 +1,14 @@
 {
   "_args": [
     [
-      "nodebb-theme-material",
+      "nodebb-theme-material-techo",
       "/home/dontpanic/nodebb/nodebb"
     ]
   ],
-  "_from": "nodebb-theme-material@*",
-  "_id": "nodebb-theme-material@2.2.4",
+  "_from": "nodebb-theme-material-techo@*",
+  "_id": "nodebb-theme-material-techo@2.2.4",
   "_inCache": true,
-  "_location": "/nodebb-theme-material",
+  "_location": "/nodebb-theme-material-techo",
   "_nodeVersion": "0.12.2",
   "_npmUser": {
     "email": "pichalite.com@gmail.com",
@@ -17,8 +17,8 @@
   "_npmVersion": "2.7.4",
   "_phantomChildren": {},
   "_requested": {
-    "name": "nodebb-theme-material",
-    "raw": "nodebb-theme-material",
+    "name": "nodebb-theme-material-techo",
+    "raw": "nodebb-theme-material-techo",
     "rawSpec": "",
     "scope": null,
     "spec": "*",
@@ -27,17 +27,17 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/nodebb-theme-material/-/nodebb-theme-material-2.2.4.tgz",
+  "_resolved": "https://registry.npmjs.org/nodebb-theme-material-techo/-/nodebb-theme-material-techo-2.2.4.tgz",
   "_shasum": "0656cb12c69b85a7f7d8e75f5febc46dc47dbfaa",
   "_shrinkwrap": null,
-  "_spec": "nodebb-theme-material",
+  "_spec": "nodebb-theme-material-techo",
   "_where": "/home/dontpanic/nodebb/nodebb",
   "author": {
     "email": "pichalite.com@gmail.com",
     "name": "pichalite"
   },
   "bugs": {
-    "url": "https://github.com/pichalite/nodebb-theme-material/issues"
+    "url": "https://github.com/techo-io/nodebb-theme-material-techo/issues"
   },
   "dependencies": {},
   "description": "Material Design theme for NodeBB",
@@ -45,10 +45,10 @@
   "directories": {},
   "dist": {
     "shasum": "0656cb12c69b85a7f7d8e75f5febc46dc47dbfaa",
-    "tarball": "http://registry.npmjs.org/nodebb-theme-material/-/nodebb-theme-material-2.2.4.tgz"
+    "tarball": "http://registry.npmjs.org/nodebb-theme-material-techo/-/nodebb-theme-material-techo-2.2.4.tgz"
   },
   "gitHead": "a5b8d7f8763bdb7d888a99cb683ca85c03c6ab00",
-  "homepage": "https://github.com/pichalite/nodebb-theme-material",
+  "homepage": "https://github.com/techo-io/nodebb-theme-material-techo",
   "installable": true,
   "keywords": [
     "material",
@@ -64,14 +64,14 @@
       "email": "pichalite.com@gmail.com"
     }
   ],
-  "name": "nodebb-theme-material",
+  "name": "nodebb-theme-material-techo",
   "nbbpm": {
     "compatibility": "^0.8.2"
   },
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/pichalite/nodebb-theme-material"
+    "url": "https://github.com/techo-io/nodebb-theme-material-techo"
   },
   "scripts": {},
   "version": "2.2.4"

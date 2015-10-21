@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-material",
+	"id": "nodebb-theme-material-techo",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
@@ -10,6 +10,12 @@
 		},
 		{
 			"hook": "filter:config.get", "method": "getConfig"
+		},
+		{
+			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
+		},
+		{
+			"hook": "filter:widget.render:materialrecent", "method": "renderMaterialRecent"
 		}
 	],
 	"scripts": [
