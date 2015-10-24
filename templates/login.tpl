@@ -19,7 +19,7 @@
                 </div>
                 <label class="fg-label">{allowLoginWith}</label>
             </div>
-            
+
             <div class="input-group fg-float">
                 <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
                 <div class="fg-line">
@@ -27,7 +27,7 @@
                 </div>
                 <label class="fg-label">[[user:password]]</label>
             </div>
-            
+
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="remember" id="remember" checked>
@@ -35,27 +35,26 @@
                     [[login:remember_me]]
                 </label>
             </div>
-            
+
             <button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 
             <div class="login-options">
                 <!-- IF allowRegistration -->
-                <span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
+                <ul class="alternate-auth">
+                    <span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a>&nbsp;或&nbsp;使用</span>
+                    <!-- IF alternate_logins -->
+                        <!-- BEGIN authentication -->
+                        <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
+                        <!-- END authentication -->
+                        <span>登陆</span>
+                    <!-- ENDIF alternate_logins -->
+                </ul>
                 <!-- ENDIF allowRegistration -->
                 <!-- IF showResetLink -->
                 &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
                 <!-- ENDIF showResetLink -->
             </div>
-            
+
         </div>
     </form>
-    <!-- IF alternate_logins -->
-            <div class="login-options">
-                <ul class="alternate-auth">
-                <!-- BEGIN authentication -->
-                <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
-                <!-- END authentication -->
-                </ul>
-            </div>
-            <!-- ENDIF alternate_logins -->
 </div>

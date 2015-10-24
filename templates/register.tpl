@@ -33,7 +33,7 @@
                 <span id="username-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-        
+
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
@@ -44,7 +44,7 @@
                 <span id="password-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-        
+
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
@@ -55,7 +55,7 @@
                 <span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-        
+
         <!-- BEGIN regFormEntry -->
         <div class="input-group">
             <div id="register-{regFormEntry.styleName}">
@@ -75,18 +75,20 @@
         </div>
         <!-- ENDIF termsOfUse -->
         <button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
+        <!-- IF alternate_logins -->
+        <div class="register-options">
+            <ul class="alternate-auth">
+                <span>使用</span>
+            <!-- BEGIN authentication -->
+            <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
+            <!-- END authentication -->
+            <span>登陆</span>
+            </ul>
+        </div>
+        <!-- ENDIF alternate_logins -->
         <input id="referrer" type="hidden" name="referrer" value="" />
         <input id="token" type="hidden" name="token" value="" />
         </form>
     </div>
 
-    <!-- IF alternate_logins -->
-    <div class="register-options">
-        <ul class="alternate-auth">
-        <!-- BEGIN authentication -->
-        <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
-        <!-- END authentication -->
-        </ul>
-    </div>
-    <!-- ENDIF alternate_logins -->
 </div>
