@@ -1,19 +1,64 @@
 {
-  "name": "nodebb-theme-material-techo",
-  "version": "1.0.0",
-  "description": "NodeBB Theme based on nodebb-theme-material",
-  "main": "./lib/theme.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      "https://github.com/techo-io/nodebb-theme-material-techo.git",
+      "/home/dontpanic/nodebb/nodebb"
+    ]
+  ],
+  "_from": "git+https://github.com/techo-io/nodebb-theme-material-techo.git",
+  "_id": "nodebb-theme-material-techo@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/nodebb-theme-material-techo",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/techo-io/nodebb-theme-material-techo/master/package.json",
+      "gitUrl": "git://github.com/techo-io/nodebb-theme-material-techo.git",
+      "httpsUrl": "git+https://github.com/techo-io/nodebb-theme-material-techo.git",
+      "shortcut": "github:techo-io/nodebb-theme-material-techo",
+      "ssh": "git@github.com:techo-io/nodebb-theme-material-techo.git",
+      "sshUrl": "git+ssh://git@github.com/techo-io/nodebb-theme-material-techo.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "https://github.com/techo-io/nodebb-theme-material-techo.git",
+    "rawSpec": "https://github.com/techo-io/nodebb-theme-material-techo.git",
+    "scope": null,
+    "spec": "git+https://github.com/techo-io/nodebb-theme-material-techo.git",
+    "type": "hosted"
   },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/techo-io/nodebb-theme-material-techo.git#b9344d57eede76bc5f1424c911df1aab25dc2b95",
+  "_shasum": "e21030702c371ee667439cdce4ac683288f6365e",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/techo-io/nodebb-theme-material-techo.git",
+  "_where": "/home/dontpanic/nodebb/nodebb",
+  "author": {
+    "name": "dontpanic"
+  },
+  "bugs": {
+    "url": "https://github.com/techo-io/nodebb-theme-material-techo/issues"
+  },
+  "dependencies": {},
+  "description": "NodeBB Theme based on nodebb-theme-material",
+  "devDependencies": {},
+  "gitHead": "b9344d57eede76bc5f1424c911df1aab25dc2b95",
+  "homepage": "https://github.com/techo-io/nodebb-theme-material-techo#readme",
+  "license": "ISC",
+  "main": "./lib/theme.js",
+  "name": "nodebb-theme-material-techo",
+  "optionalDependencies": {},
+  "readme": "Theme for NodeBB based on nodebb-theme-material\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techo-io/nodebb-theme-material-techo.git"
   },
-  "author": "dontpanic",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/techo-io/nodebb-theme-material-techo/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/techo-io/nodebb-theme-material-techo#readme"
+  "version": "1.0.0"
 }

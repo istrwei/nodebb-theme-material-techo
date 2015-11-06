@@ -1,7 +1,7 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-9" no-widget-class="col-lg-12 col-xs-12" no-widget-target="topic-sidebar">
 			<div class="card">
 				<div class="listview lv-lg">
 
@@ -20,6 +20,13 @@
 
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-xs-12">
+			<div widget-area="topic-sidebar">
+				<!-- BEGIN widgets -->
+				{widgets.html}
+				<!-- END widgets -->
 			</div>
 		</div>
 	</div>
