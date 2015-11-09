@@ -3,10 +3,20 @@
 	<div class="col-xs-12">
 		<div class="card">
 			<div class="card-body" component="groups/cover" style="background-origin: content-box; background-image: url({group.cover:url}); background-position: {group.cover:position};">
-				<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
+				<!--div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
 				<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 				<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
-				<div class="instructions">[[groups:cover-instructions]]</div>
+				<div class="instructions">[[groups:cover-instructions]]</div-->
+
+				<!-- IF group.isOwner -->
+				<div class="controls">
+					<span class="upload"><i class="fa fa-fw fa-2x fa-upload"></i></span>
+					<span class="resize"><i class="fa fa-fw fa-2x fa-arrows"></i></span>
+					<span class="remove"><i class="fa fa-fw fa-2x fa-times"></i></span>
+				</div>
+				<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
+				<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
+				<!-- ENDIF group.isOwner -->
 			</div>
 		</div>
 	</div>
@@ -45,11 +55,11 @@
 					<tr data-uid="{group.members.uid}">
 						<td>
 							<a href="{config.relative_path}/user/{group.members.userslug}">
-								<!-- IF groups.members.picture -->
-									<img src="{groups.members.picture}" />
+							<!-- IF group.members.picture -->
+							<img src="{group.members.picture}" />
   						 	<!-- ELSE -->
-  								<div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
-	  						<!-- ENDIF groups.members.picture -->
+  							<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
+	  						<!-- ENDIF group.members.picture -->
 							</a>
 						</td>
 						<td class="member-name">
