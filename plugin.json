@@ -1,6 +1,9 @@
 {
 	"id": "nodebb-theme-material-techo",
 	"library": "./lib/theme.js",
+	"staticDirs": {
+	    "fonts": "./fonts"
+	  },
 	"hooks": [
 		{
 			"hook": "static:app.load", "method": "init"
