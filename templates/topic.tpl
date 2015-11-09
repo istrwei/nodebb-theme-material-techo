@@ -7,12 +7,12 @@
 				<div class="listview lv-lg">
 
 					<div class="lv-body" component="topic" data-tid="{tid}">
-						<!-- partials/topic/main-post.tpl -->
+						<!-- IMPORT partials/topic/main-post.tpl -->
 
 							<!-- BEGIN posts -->
-							<!-- !@first -->
+							<!-- IF !@first -->
 								<!-- IMPORT partials/topic/post.tpl -->
-							<!-- !@first -->
+							<!-- ENDIF !@first -->
 							<!-- END posts -->
 
 
