@@ -5,7 +5,7 @@
             <div>{groups.displayName}</div>
             <small>{groups.description}</small>
         </div>
-        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url});<!-- ENDIF groups.cover:url -->">
+        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url}); background-size: contain; background-repeat: no-repeat; background-position: center;<!-- ENDIF groups.cover:url -->">
         </div>
         <div class="card-body card-padding">
             <ul class="members">
