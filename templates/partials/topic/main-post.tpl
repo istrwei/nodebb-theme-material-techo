@@ -12,7 +12,7 @@
   <div component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
 
     <div class="lv-header-alt" component="post/header" itemprop="name">
-    <a component="post/anchor" name="{posts.index}"></a>
+    <a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
     <meta itemprop="datePublished" content="{posts.relativeTime}">
     <meta itemprop="dateModified" content="{posts.relativeEditTime}">
 
