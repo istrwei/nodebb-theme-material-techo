@@ -226,14 +226,14 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->>
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->>
 							<i class="input-helper"></i>
 							[[groups:details.userTitleEnabled]]
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->>
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->>
 							<i class="input-helper"></i>
 							[[groups:details.private]]
 						</label>
@@ -241,7 +241,7 @@
 					<small class="help-block">[[groups:details.private_help]]</small>
 					<div class="checkbox">
 	                    <label>
-	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->>
+	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
 	                        <i class="input-helper"></i>
 	                        [[groups:details.hidden]]
 	                    </label>
