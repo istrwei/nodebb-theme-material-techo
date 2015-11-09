@@ -1,25 +1,24 @@
-
 <!-- IF !notifications.length -->
-<a class="no-notifs lv-item">[[notifications:no_notifs]]</a>
+<li class="no-notifs"><a>[[notifications:no_notifs]]</a></li>
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
-<a class="lv-item" href="{config.relative_path}{notifications.path}">
-    <div class="media {notifications.readClass}" data-nid="{notifications.nid}">
-        <div class="pull-left">
-            <!-- IF notifications.image -->
-			<!-- IF notifications.from -->
-			<img class="user-picture" src="{notifications.image}" />
-			<!-- ENDIF notifications.from -->
-			<!-- ELSE -->
-			<img class="user-picture" src="{notifications.image}"/>
-			<!-- ENDIF notifications.image -->
-        </div>
-        <div class="pull-right mark-read" aria-label="Mark Read"></div>
-        <span class="pull-right relTime">{notifications.timeago}</span>
-        <div class="media-body">
-            <small class="lv-small">{notifications.bodyShort}</small>
-        </div>
-    </div>
-</a>
+<li class="{notifications.readClass}" data-nid="{notifications.nid}">
+	<!-- IF notifications.image -->
+	<!-- IF notifications.from -->
+	<a href="{config.relative_path}/user/{notifications.user.userslug}" class="pull-left"><img src="{notifications.image}" class="user-picture"/></a>
+	<!-- ENDIF notifications.from -->
+	<!-- ELSE -->
+	<a href="{config.relative_path}/user/{notifications.user.userslug}" class="pull-left"><div class="user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
+	<!-- ENDIF notifications.image -->
+
+	<div class="pull-right mark-read" aria-label="Mark Read"></div>
+	<a href="{config.relative_path}{notifications.path}">
+		<span class="pull-right relTime">{notifications.timeago}</span>
+		<div style="vertical-align: middle">
+		<span class="text">{notifications.bodyShort}</span>
+		</div>
+	</a>
+	<div class="clear"></div>
+</li>
 <!-- END notifications -->

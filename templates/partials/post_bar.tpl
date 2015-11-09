@@ -24,5 +24,3 @@
 	<!-- IMPORT partials/topic/reply-button.tpl -->
 	<!-- IMPORT partials/thread_tools.tpl -->
 </div>
-
-

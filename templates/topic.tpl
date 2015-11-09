@@ -2,22 +2,23 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<div class="row">
 		<div class="col-md-9" no-widget-class="col-lg-12 col-xs-12" no-widget-target="topic-sidebar">
+			<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
 			<div class="card">
 				<div class="listview lv-lg">
 
 					<div class="lv-body" component="topic" data-tid="{tid}">
-						<!-- IMPORT partials/topic/main-post.tpl -->
+						<!-- partials/topic/main-post.tpl -->
 
 							<!-- BEGIN posts -->
-							<!-- IF !@first -->
+							<!-- !@first -->
 								<!-- IMPORT partials/topic/post.tpl -->
-							<!-- ENDIF !@first -->
+							<!-- !@first -->
 							<!-- END posts -->
 
-							<div class="post-bar <!-- IF unreplied -->hidden<!-- ENDIF unreplied -->">
-								<!-- IMPORT partials/post_bar.tpl -->
-							</div>
 
+							  <div class="post-bar">
+							    <!-- IMPORT partials/post_bar.tpl -->
+							  </div>
 					</div>
 				</div>
 			</div>

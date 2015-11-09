@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="card" id="chat-main">
-    <div class="chat-menu">   
+    <div class="chat-menu">
         <div class="chat-block">
             <div class="panel-group" aria-multiselectable="true">
                 <div class="panel panel-collapse">
@@ -13,17 +13,22 @@
                     </div>
                     <div class="recent-chats collapse in">
                         <div class="panel-body">
-                            <div class="chats-list listview lv-user">                                
+                            <div class="chats-list listview lv-user">
                                 <!-- BEGIN chats -->
                                 <li class="lv-item media<!-- IF chats.unread --> unread<!-- ENDIF chats.unread -->" data-username="{chats.username}" data-uid="{chats.uid}">
                                     <div class="pull-left">
-                                        <img src="{chats.picture}" alt="">
+                                        <!-- IF chats.picture -->
+                                        <img src="{chats.picture}">
+                                        <!-- ELSE -->
+                                        <div class="user-icon" style="background-color: {chats.icon:bgColor};">{chats.icon:text}</div>
+                                        <!-- ENDIF chats.picture -->
+
                                     </div>
                                     <div class="media-body">
                                         <div class="lv-title">{chats.username}</div>
                                     </div>
                                 </li>
-                                <!-- END chats -->     
+                                <!-- END chats -->
                             </div>
                         </div>
                     </div>
@@ -38,25 +43,29 @@
                     </div>
                     <div class="contacts collapse">
                         <div class="panel-body">
-                            <div class="chats-list listview lv-user"> 
+                            <div class="chats-list listview lv-user">
                                 <!-- BEGIN contacts -->
                                 <li class="lv-item media" data-username="{contacts.username}" data-uid="{contacts.uid}">
                                     <div class="pull-left">
-                                        <img src="{contacts.picture}" alt="">
+                                        <!-- IF contacts.picture -->
+                                        <img src="{contacts.picture}">
+                                        <!-- ELSE -->
+                                        <div class="user-icon" style="background-color: {contacts.icon:bgColor};">{contacts.icon:text}</div>
+                                        <!-- ENDIF contacts.picture -->
                                     </div>
                                     <div class="media-body">
                                         <div class="lv-title">{contacts.username}</div>
                                     </div>
                                 </li>
-                                <!-- END contacts --> 
+                                <!-- END contacts -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
-    
+
     <div class="chat-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
         <div class="listview lv-message">
             <div class="lv-header-alt bgm-white">
@@ -67,7 +76,7 @@
                         <div class="line bottom"></div>
                     </div>
                 </div>
-                
+
                 <div class="chat-header">
                     <!-- IF meta.username -->
                     <span>[[modules:chat.chatting_with]] {meta.username}</span>
@@ -85,10 +94,10 @@
             <!-- IF meta -->
             <span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
             <!-- ENDIF meta -->
-            
+
             <ul class="lv-body chat-content">
                 <!-- IF meta -->
-                <!-- IMPORT partials/chat_messages.tpl -->                                 
+                <!-- IMPORT partials/chat_messages.tpl -->
                 <span class="user-typing pull-right hide"><i class="fa fa-pencil"></i> [[modules:chat.user_typing, {meta.username}]]</span>
                 <!-- ENDIF meta -->
             </ul>
@@ -98,7 +107,7 @@
                 <button type="button" data-action="send"><i class="fa fa-send"></i></button>
             </div>
             <!-- ENDIF meta -->
-            
+
         </div>
     </div>
 </div>

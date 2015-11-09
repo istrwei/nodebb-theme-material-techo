@@ -6,11 +6,12 @@
 </style>
 
 
-<div class="lv-header-alt" component="post/header" itemprop="name">
 
   <!-- BEGIN posts -->
   <!-- IF @first -->
   <div component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
+
+    <div class="lv-header-alt" component="post/header" itemprop="name">
     <a component="post/anchor" name="{posts.index}"></a>
     <meta itemprop="datePublished" content="{posts.relativeTime}">
     <meta itemprop="dateModified" content="{posts.relativeEditTime}">
@@ -19,7 +20,11 @@
       <div class="post0-content">
         <div class="poster-avatar hidden-xs">
           <a href="{config.relative_path}/user/{posts.user.userslug}">
-            <img class="user-picture" src="{posts.user.picture}" title="{posts.user.username}">
+            <!-- IF posts.user.picture -->
+            <img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" class="user-picture" title="{posts.user.username}"/>
+            <!-- ELSE -->
+            <div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+            <!-- ENDIF posts.user.picture -->
           </a>
         </div>
         <div class="post0-title">
@@ -59,7 +64,12 @@
           <div class="row">
             <div class="post-header">
               <a class="pull-left visible-xs" href="{config.relative_path}/user/{posts.user.userslug}">
-                <img class="post-user-picture" src="{posts.user.picture}" title="{posts.user.username}">
+                <!-- IF posts.user.picture -->
+                <img src="{posts.user.picture}" class="post-user-picture" title="{posts.user.username}"/>
+                <!-- ELSE -->
+                <div class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+                <!-- ENDIF posts.user.picture -->
+
               </a>
 
               <i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
@@ -71,8 +81,8 @@
                 [[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
                 <span class="post-tools">
-                  <a component="post/reply" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
-                  <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
+                  <a component="post/reply" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
+                  <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
                 </span>
               </span>
               <ul class="lv-actions actions hidden-xs" id="browsing-users">
@@ -109,11 +119,7 @@
     </div>
   </div>
 
-  <div class="post-bar" data-index="{posts.index}">
-    <!-- IMPORT partials/post_bar.tpl -->
   </div>
 
   <!-- ENDIF @first -->
   <!-- END posts -->
-
-</div>

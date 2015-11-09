@@ -11,7 +11,7 @@
 				<div class="listview lv-bordered lv-lg">
 					<div class="lv-header-alt">
 						<div class="title">
-					        <div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
+					    <div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 									[[unread:mark_as_read]] <span class="caret"></span>
 								</button>
@@ -26,7 +26,7 @@
 									<li class="divider"></li>
 									<!-- BEGIN categories -->
 									<li role="presentation" class="category" data-cid="{categories.cid}">
-										<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF icon --> {categories.name}</a>
+										<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 									</li>
 									<!-- END categories -->
 								</ul>

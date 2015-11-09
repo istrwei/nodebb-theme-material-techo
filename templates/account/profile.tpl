@@ -4,32 +4,36 @@
 		<div class="col-md-5 account-block">
 			<div class="card profile-view">
                 <div class="pv-header">
-                    <img src="{picture}" class="pv-main" alt="">
-                </div>               
+										<!-- IF picture -->
+											<img src="{picture}" class="pv-main" alt=""/>
+		  						 	<!-- ELSE -->
+		  								<div class="pv-main user-icon" style="background-color: {icon:bgColor};">{icon:text}</div>
+			  						<!-- ENDIF picture -->
+                </div>
                 <div class="pv-body">
                     <span><i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i> <span class="account-username"> {username}</span></span>
-                
+
                     <div class="pv-contact">
                         <!-- IF !isSelf -->
 						<br/>
 						<!-- IF !config.disableChat -->
-						<a id="chat-btn" href="#" class="btn btn-primary btn-sm">[[user:chat]]</a>
+						<a id="chat-btn" component="account/chat" href="#" class="btn btn-primary btn-sm">[[user:chat]]</a>
 						<!-- ENDIF !config.disableChat -->
-							<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
-							<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
+							<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
+							<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
 							<!-- IF isAdmin -->
 							<br/><br/>
 
-							<a id="banAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF banned -->hide<!-- ENDIF banned -->">[[user:ban_account]]</a>
-							<a id="unbanAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF !banned -->hide<!-- ENDIF !banned -->">[[user:unban_account]]</a>
-							<a id="deleteAccountBtn" href="#" class="btn btn-danger btn-sm">[[user:delete_account]]</a><br/><br/>
+							<a id="banAccountBtn" component="account/ban" href="#" class="btn btn-danger btn-sm <!-- IF banned -->hide<!-- ENDIF banned -->">[[user:ban_account]]</a>
+							<a id="unbanAccountBtn" component="account/unban" href="#" class="btn btn-danger btn-sm <!-- IF !banned -->hide<!-- ENDIF !banned -->">[[user:unban_account]]</a>
+							<a id="deleteAccountBtn" component="account/delete" href="#" class="btn btn-danger btn-sm">[[user:delete_account]]</a><br/><br/>
 							<!-- ENDIF isAdmin -->
 						<!-- ENDIF !isSelf -->
 
 						<div id="banLabel" class="text-center <!-- IF !banned -->hide<!-- ENDIF !banned -->">
 							<span class="label label-danger">[[user:banned]]</span>
 						</div>
-						
+
 						<!-- IF aboutme -->
 						<hr/>
 						<div component="aboutme" class="text-center">
@@ -37,7 +41,7 @@
 						</div>
 						<!-- ENDIF aboutme -->
                     </div>
-                    
+
                     <ul class="pv-follow">
                         <li>
                         	<span style="display:block;">{reputation}</span>
@@ -61,9 +65,9 @@
 						<li>
 							<span class="human-readable-number account-bio-value"  title="{followingCount}" style="display:block;">{followingCount}</span>
 							<span class="account-bio-label">[[user:following]]</span>
-						</li> 
+						</li>
                     </ul>
-                           
+
                 </div>
             </div>
 

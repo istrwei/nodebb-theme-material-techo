@@ -49,7 +49,7 @@
               <i class="fa fa-angle-up pointer fa-fw pageup"></i>
 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span id="pagination"></span>
+                <span class="pagination-text"></span>
               </a>
 
               <i class="fa fa-angle-down pointer fa-fw pagedown"></i>
@@ -128,7 +128,10 @@
 
           <li id="user_label" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown">
-              <img component="header/userpicture" id="user-header-picture" class="user-picture" src="{user.picture}" alt="{user.username}"/>
+
+              <img component="header/userpicture" class="user-picture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
+							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;"<!-- ENDIF user.picture -->">{user.icon:text}</div>
+
             </a>
             <ul id="user-control-list" component="header/usercontrol" class="dropdown-menu pull-right" aria-labelledby="user_dropdown">
               <li>

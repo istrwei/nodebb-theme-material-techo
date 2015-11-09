@@ -68,7 +68,7 @@
 			font-size:13px;
 			border:0;
 			padding:10px 8px;
-			resize:none;	
+			resize:none;
 		}
 		button {
 			position:absolute;
@@ -284,12 +284,20 @@
 	}
 }
 
-.chat-message img, .chats-list>li img{
-	width:35px;
-	height:35px;
-	border-radius:50%;
-	vertical-align:top;
+.chat-message, .chats-list>li{
+		img{
+				width:35px;
+				height:35px;
+				border-radius:50%;
+				vertical-align:top;
+		}
+		.user-icon {
+				.user-icon-style(35px, 2rem, 50%);
+				line-height: 35px;
+				vertical-align: top;
+		}
 }
+
 
 .chat-header {
 	color: #818181;
@@ -331,7 +339,13 @@
 	    width: 32px;
 	    height: 32px;
 	    margin-right: 10px;
-	}
+		}
+
+		.user-icon {
+			.user-icon-style(32px, 1.9rem, 50%);
+			line-height: 32px;
+			margin-right: 10px;
+		}
 }
 
 .chats .listview .lv-footer {

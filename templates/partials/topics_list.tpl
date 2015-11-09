@@ -14,7 +14,13 @@
 
 		<div class="pull-left hidden-xs">
         	<a href="{config.relative_path}/user/{topics.user.userslug}">
-            	<img class="lv-img" src="{topics.user.picture}" title="{topics.user.username}">
+
+							<!-- IF topics.user.picture -->
+								<img src="{topics.user.picture}" class="lv-img" title="{topics.user.username}"/>
+							<!-- ELSE -->
+								<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
+							<!-- ENDIF topics.user.picture -->
+
         	</a>
     	</div>
     	<div class="media-body">
@@ -31,7 +37,7 @@
 
 			<!-- IF template.category -->
 			<small>
-            	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | 
+            	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> |
             	<!-- IF topics.user.userslug -->
 				[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
 				<!-- ELSE -->
@@ -50,7 +56,7 @@
 				<!-- ENDIF topics.user.userslug -->
 			</small>
 			<!-- ENDIF !template.category -->
-			
+
 			<ul class="lv-attrs hidden-xs">
                 <!-- IF topics.tags.length -->
 				<!-- BEGIN tags -->
@@ -70,7 +76,13 @@
 				<!-- IF topics.teaser.index -->
 				<li class="lv-small">
 					<a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-						<img class="user-picture" src="{topics.teaser.user.picture}" title="{topics.teaser.user.username}">
+
+						<!-- IF topics.teaser.user.picture -->
+						<img title="{topics.teaser.user.username}" class="user-picture" src="{topics.teaser.user.picture}" />
+						<!-- ELSE -->
+						<span title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
+						<!-- ENDIF topics.teaser.user.picture -->
+
 					</a>
 					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]

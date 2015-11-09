@@ -3,7 +3,14 @@
 	<div class="row">
 		<div class="col-md-2">
 			<div class="account-picture-block text-center">
-				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
+
+				<!-- IF picture -->
+					<img src="{picture}" id="user-current-picture" class="user-profile-picture" />
+				<!-- ELSE -->
+					<div class="user-icon" style="background-color: {icon:bgColor};">{icon:text}</div>
+				<!-- ENDIF picture -->
+
+				<br /><br />
 				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
 				<br/><br/>
 				<!-- IF config.allowAccountDelete -->
@@ -100,12 +107,12 @@
 		<div class="col-md-5">
 			<div class="card">
 				<form class='form-horizontal'>
-				<div class="card-body card-padding">	
+				<div class="card-body card-padding">
 					<!-- IF isSelf -->
 					<div class="input-group">
 						<div class="fg-line">
 							<label>[[user:current_password]]</label>
-							<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
+							<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword -->>
 						</div>
 						<span class="input-group-addon last">
 							<span></i></span>

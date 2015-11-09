@@ -44,7 +44,13 @@
 					<!-- BEGIN members -->
 					<tr data-uid="{group.members.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.members.userslug}">
+								<!-- IF groups.members.picture -->
+									<img src="{groups.members.picture}" />
+  						 	<!-- ELSE -->
+  								<div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
+	  						<!-- ENDIF groups.members.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
@@ -96,11 +102,17 @@
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
 					<!-- ENDIF !group.pending.length -->
-					
+
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.pending.userslug}"><img src="{group.pending.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.pending.userslug}">
+								<!-- IF groups.pending.picture -->
+									<img src="{groups.pending.picture}" />
+								<!-- ELSE -->
+									<div class="user-icon" style="background-color: {groups.pending.icon:bgColor};">{groups.pending.icon:text}</div>
+								<!-- ENDIF groups.pending.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -137,7 +149,13 @@
 					<!-- BEGIN invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.invited.userslug}">
+								<!-- IF groups.invited.picture -->
+									<img src="{groups.invited.picture}" />
+  						 	<!-- ELSE -->
+  								<div class="user-icon" style="background-color: {groups.invited.icon:bgColor};">{groups.invited.icon:text}</div>
+	  						<!-- ENDIF groups.invited.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
@@ -165,7 +183,7 @@
 		<div class="card">
 			<div class="card-header ch-alt pointer" data-toggle="collapse" data-target=".options">
 					<i class="fa fa-caret-down pull-right"></i>
-					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]			
+					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
 			</div>
 
 			<div class="card-body card-padding options collapse">
@@ -208,14 +226,14 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> 
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->>
 							<i class="input-helper"></i>
 							[[groups:details.userTitleEnabled]]
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> 
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->>
 							<i class="input-helper"></i>
 							[[groups:details.private]]
 						</label>
