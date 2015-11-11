@@ -3,7 +3,7 @@
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground} height: 100px;">
 			<a href="<!-- IF categories.link -->{categories.link}<!-- ELSE -->{config.relative_path}/category/{categories.slug}<!-- ENDIF categories.link -->" itemprop="url" <!-- IF categories.link -->target="_blank"<!-- ENDIF categories.link -->>
-				<div class="new-card-body">
+				<div class="new-card-body" style="height: 100px">
 					<ul class="category-counts pull-right">
 						<li>
 							<i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
