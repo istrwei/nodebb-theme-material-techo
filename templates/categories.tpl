@@ -2,7 +2,7 @@
 	<!-- BEGIN categories -->
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
-			<a href="<!-- IF categories.link -->{categories.link}<!-- ELSE -->{config.relative_path}/category/{categories.slug}<!-- ENDIF categories.link-->" itemprop="url" <!-- IF categories.link -->target="_blank"<!-- ENDIF categories.link -->>
+			<a href="<!-- IF categories.link -->{categories.link}<!-- ELSE -->{config.relative_path}/category/{categories.slug}<!-- ENDIF categories.link -->" itemprop="url" <!-- IF categories.link -->target="_blank" <!-- ENDIF categories.link --> >
 				<div class="new-card-body">
 					<ul class="category-counts pull-right">
 						<li>
