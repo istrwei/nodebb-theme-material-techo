@@ -103,7 +103,7 @@
 					<div class="timeago account-bio-value" title="{joindate}"></div>
 
 					<div class="profile-label">[[user:lastonline]]</div>
-					<div class="timeago account-bio-value" title="{lastonline}"></div>
+					<div class="timeago account-bio-value" title="{lastonlineISO}"></div>
 
 					<!-- IF !disableSignatures -->
 					<!-- IF signature -->
