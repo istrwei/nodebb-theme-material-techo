@@ -21,7 +21,10 @@
 			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
 		},
 		{
-			"hook": "filter:widget.render:materialrecent", "method": "renderMaterialRecent"
+			"hook": "filter:widget.render:material_recent", "method": "renderMaterialRecent"
+		},
+		{
+			"hook": "filter:widget.render:material_cate_sidebar", "method": "renderMaterialCategoriesSidebar"
 		}
 	],
 	"scripts": [
