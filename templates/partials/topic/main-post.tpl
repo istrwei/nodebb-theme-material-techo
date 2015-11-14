@@ -89,10 +89,10 @@
                 <li>
                   <span class="browsing-users">
                     [[category:browsing]]
-                    <span component="topic/browsing/list" class="thread_active_users active-users"></span>
+                    <div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
                   </span>
                   <small class="hidden">
-                    <i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
+      				<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
                   </small>
                 </li>
               </ul>
