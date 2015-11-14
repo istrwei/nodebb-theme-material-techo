@@ -87,7 +87,7 @@
               </span>
               <ul class="lv-actions actions hidden-xs" id="browsing-users">
                 <li>
-                  <span class="browsing-users">
+                  <span class="browsing-users hidden">
                     [[category:browsing]]
                     <div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
                   </span>
