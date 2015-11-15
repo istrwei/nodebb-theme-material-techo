@@ -43,6 +43,14 @@
                     </div>
 
                     <ul class="pv-follow">
+						<li>
+							<!-- IF !points -->
+							<span style="display:block;" title="0">0</span>
+							<!-- ELSE -->
+							<span style="display:block;" title="{points}">{points}</span>
+							<!-- ENDIF !points -->
+							<span>积分</span>
+						</li>
                         <li>
                         	<span style="display:block;">{reputation}</span>
                         	<span>[[global:reputation]]</span>
@@ -55,6 +63,7 @@
                         	<span style="display:block;">{profileviews}</span>
                         	<span>[[user:profile_views]]</span>
                         </li>
+
                     </ul>
 
                     <ul class="pv-follow">
