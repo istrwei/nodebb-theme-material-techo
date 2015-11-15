@@ -22,6 +22,11 @@
 			</div>
 			<!-- ENDIF !topics.length -->
 			<!-- IMPORT partials/topics_list.tpl -->
+			<div class="lv-header-alt" style="border-top: solid 1px #f0f0f0">
+				<div class="title">
+			        <a href="/recent">查看更多新主题</a>
+				</div>
+		    </div>
 		</div>
 	</div>
 </div>
