@@ -36,15 +36,6 @@
   right: 15px;
 }
 
-@media (max-width: @screen-xs-max) {
-  #nprogress .spinner {
-    bottom: 15px;
-    right: 15px;
-    top: initial;
-  }
-}
-
-
 #nprogress .spinner-icon {
   width: 18px;
   height: 18px;
@@ -57,6 +48,19 @@
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
           animation: nprogress-spinner 400ms linear infinite;
+}
+
+@media (max-width: @screen-xs-max) {
+  #nprogress .spinner {
+    bottom: 15px;
+    right: 15px;
+    top: initial;
+  }
+  
+  #nprogress .spinner-icon {
+    border-top-color: #3f556f;//#29d;
+    border-left-color: #3f556f;//#29d;
+  }
 }
 
 .nprogress-custom-parent {
