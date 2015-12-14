@@ -36,7 +36,7 @@
 		<li><a class="weibo-share" href="#"><i class="fa fa-weibo"></i> Weibo</a></li>
 		<li><a class="weixin-share" href="#"><i class="fa fa-weixin"></i> WeiXin</a></li>
 		<li><a class="qzone-share" href="#"><i class="fa fa-qq"></i> QZone</a></li>
-		<li><a class="ydnote-share" href="#"><i class="fa fa-pencil-square"></i> Youdao Note</a></li>
+		<!--li><a class="ydnote-share" href="#"><i class="fa fa-pencil-square"></i> Youdao Note</a></li-->
 		<li><a class="facebook-share" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
 		<li><a class="twitter-share" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
 		<li><a class="google-share" href="#"><i class="fa fa-google-plus"></i> Google+</a></li>
