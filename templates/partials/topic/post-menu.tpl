@@ -33,6 +33,10 @@
 		<!-- IF !config.disableSocialButtons -->
 		<li class="divider"></li>
 		<li class="tools-title">[[topic:share_this_post]]</li>
+		<li><a class="weibo-share" href="#"><i class="fa fa-weibo"></i> Weibo</a></li>
+		<li><a class="weixin-share" href="#"><i class="fa fa-weixin"></i> WeiXin</a></li>
+		<li><a class="qzone-share" href="#"><i class="fa fa-qq"></i> QZone</a></li>
+		<li><a class="ydnote-share" href="#"><i class="fa fa-pencil-square"></i> Youdao Note</a></li>
 		<li><a class="facebook-share" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
 		<li><a class="twitter-share" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
 		<li><a class="google-share" href="#"><i class="fa fa-google-plus"></i> Google+</a></li>
@@ -45,3 +49,47 @@
 		<!-- ENDIF !posts.selfPost -->
 	</ul>
 </li>
+
+<script>
+	$(document).ready(function(){
+		/*
+     * Share buttons
+     */
+    (function () {
+        function addHandler(selector, callback) {
+            $('#content').off('click', selector).on('click', selector, callback);
+        }
+
+        function getPostUrl(clickedElement) {
+            var parts = window.location.pathname.split('/');
+            var postIndex = parseInt(clickedElement.parents('[data-index]').attr('data-index'), 10);
+            return '/' + parts[1] + '/' + parts[2] + (parts[3] ? '/' + parts[3] : '') + (postIndex ? '/' + (postIndex + 1) : '');
+        }
+        
+        var baseUrl = window.location.protocol + '//' + window.location.host;
+
+		function openJiaThisShare(platform, width, height) {
+			window.open('http://www.jiathis.com/send/?webid=' + platform + '&title=' + ajaxify.data.title + '&url=' + encodeURIComponent(baseUrl + getPostUrl($(this))), '_blank', 'width=' + width + ',height=' + height + ',scrollbars=no,status=no');
+			return false;
+		}
+        
+        addHandler('.weibo-share', function () {
+			return openJiaThisShare('tsina', 500, 570);
+		});
+        
+        addHandler('.weixin-share', function () {
+			return openJiaThisShare('weixin', 800, 600);
+		});
+		
+		addHandler('.qzone-share', function () {
+			return openJiaThisShare('qzone', 800, 600);
+		});
+        
+		addHandler('.ydnote-share', function () {
+			return openJiaThisShare('ydnote', 800, 600);
+		});
+		
+    })()
+	});
+	
+</script>
