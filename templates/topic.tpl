@@ -39,10 +39,14 @@
 </div>
 <!-- IMPORT partials/noscript/paginator.tpl -->
 <script>
-$(window).on('action:posts.loaded', function(event, data) {
-	console.log("posts.loaded" + Date());
+
+function makePostLink(){
     $('.techo-post-link').each(function(){
 		$(this).attr('href', (parseInt($(this).attr('data-index'), 10) + 1).toString());
 	});
-});
+}
+
+$(window).on('action:posts.loaded', makePostLink);
+
+$(window).on('action:topic.loaded', makePostLink);
 </script>
