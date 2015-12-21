@@ -65,31 +65,35 @@
             var postIndex = parseInt(clickedElement.parents('[data-index]').attr('data-index'), 10);
             return '/' + parts[1] + '/' + parts[2] + (parts[3] ? '/' + parts[3] : '') + (postIndex ? '/' + (postIndex + 1) : '');
         }
-        
+
         var baseUrl = window.location.protocol + '//' + window.location.host;
 
 		function openJiaThisShare(platform, width, height) {
 			window.open('http://www.jiathis.com/send/?webid=' + platform + '&title=' + ajaxify.data.title + '&url=' + encodeURIComponent(baseUrl + getPostUrl($(this))), '_blank', 'width=' + width + ',height=' + height + ',scrollbars=no,status=no');
 			return false;
 		}
-        
+
         addHandler('.weibo-share', function () {
 			return openJiaThisShare('tsina', 500, 570);
 		});
-        
+
         addHandler('.weixin-share', function () {
 			return openJiaThisShare('weixin', 800, 600);
 		});
-		
+
 		addHandler('.qzone-share', function () {
 			return openJiaThisShare('qzone', 800, 600);
 		});
-        
+
 		addHandler('.ydnote-share', function () {
 			return openJiaThisShare('ydnote', 800, 600);
 		});
-		
+
+		addHandler('.pernament-link', function(){
+			$('#content').off('click', '.pernament-link').attr('href', baseUrl + getPostUrl());
+		})
+
     })()
 	});
-	
+
 </script>

@@ -56,6 +56,7 @@
                         <span class="post-tools">
                             <a component="post/reply" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
                             <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
+                            <a href="" class="techo-post-link" data-index={posts.index}><i class="fa fa-link"></i> 链接</a>
                         </span>
                     </span>
                 </div>
