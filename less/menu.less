@@ -240,14 +240,17 @@
 
 .unread-count:after {
 	content: attr(data-content);
-  	position: relative;
+  	//position: relative;
+	position: absolute;
 	color: #fff;
 	font-style: normal;
 	background: #f44336;
 	padding: 1px 3px;
 	border-radius: 2px;
-	left: -5px;
-	top: -11px;
+	//left: -5px;
+	//top: -11px;
+	bottom: 58%;
+	left: 1.91071em; //10px padding + fa-fw.width / 2 = 0.625 + 1.285
 	font-size: 11px;
 	-webkit-animation-name: wobble;
 	animation-name: wobble;
