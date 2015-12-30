@@ -7,20 +7,9 @@
 
         <div class="post0-block">
             <div class="post0-content">
-                <div class="poster-avatar">
-                    <a href="{config.relative_path}/user/{posts.user.userslug}">
-                        <!-- IF posts.user.picture -->
-                        <img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" class="user-picture" title="{posts.user.username}"/>
-                        <!-- ELSE -->
-                        <div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-                        <!-- ENDIF posts.user.picture -->
-                    </a>
-                </div>
-                <div class="post0-title">
-                    <div class="row">
-                        <i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i>
-                        <span class="topic-title" component="topic/title">{title}</span>
 
+                <div class="post0-title row">
+                    <div class="title-right">
                         <ul class="lv-actions actions">
                             <!-- IMPORT partials/topic/sort.tpl -->
                             <li>
@@ -50,8 +39,20 @@
                         </ul>
                     </div>
 
-                    <div class="row">
+                    <div class="title-left">
+                        <div class="poster-avatar">
+                            <a href="{config.relative_path}/user/{posts.user.userslug}">
+                            <!-- IF posts.user.picture -->
+                                <img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" class="user-picture" title="{posts.user.username}"/>
+                            <!-- ELSE -->
+                                <div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+                            <!-- ENDIF posts.user.picture -->
+                            </a>
+                        </div>
+                        <i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i>
+                        <span class="topic-title" component="topic/title">{title}</span>
                         <div class="post-header">
+                            
                             <i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
                             <strong>
                                 <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>

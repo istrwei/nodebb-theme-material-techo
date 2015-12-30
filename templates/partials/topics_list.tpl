@@ -1,7 +1,7 @@
 <div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
-	<div component="category/topic" class="lv-item media row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+	<div component="category/topic" class="lv-item row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 		<!-- IF showSelect -->
         <div class="checkbox pull-left">
@@ -12,7 +12,7 @@
         </div>
         <!-- ENDIF showSelect -->
 
-		<div class="pull-left hidden-xs">
+		<div class="lv-item-avatar hidden-xs">
         	<a href="{config.relative_path}/user/{topics.user.userslug}">
 
 							<!-- IF topics.user.picture -->
@@ -23,7 +23,43 @@
 
         	</a>
     	</div>
-    	<div class="media-body">
+		
+		
+		<div class="lv-item-right hidden-xs">
+            <ul>
+            <!-- IF topics.unreplied -->
+			<li class="lv-small">[[category:no_replies]]</li>
+			<!-- ELSE -->
+			<!-- IF topics.teaser.index -->
+			<li class="lv-small">
+				<a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
+
+					<!-- IF topics.teaser.user.picture -->
+					<img title="{topics.teaser.user.username}" class="user-picture" src="{topics.teaser.user.picture}" />
+					<!-- ELSE -->
+					<span title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
+					<!-- ENDIF topics.teaser.user.picture -->
+
+				</a>
+				<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+					[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]
+				</a>
+			</li>
+			<!-- ENDIF topics.teaser.index -->
+			<!-- IF !topics.teaser.index -->
+			<li class="lv-small">[[category:no_replies]]</li>
+			<!-- ENDIF !topics.teaser.index -->
+			<!-- ENDIF topics.unreplied -->
+            </ul>
+        </div>
+			
+		<div class="lv-item-right visible-xs-block">
+            <ul>
+			<li class="lv-small"><span class="human-readable-number badge" title="{topics.postcount}"></span></li>
+            </ul>
+        </div>
+		
+    	<div class="lv-item-body">
     		<div class="lv-title" component="topic/header">
     			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
@@ -67,34 +103,6 @@
 				<!-- END tags -->
 				<!-- ENDIF topics.tags.length -->
             </ul>
-
-			<div class="lv-actions actions hidden-xs">
-                <ul>
-                <!-- IF topics.unreplied -->
-				<li class="lv-small">[[category:no_replies]]</li>
-				<!-- ELSE -->
-				<!-- IF topics.teaser.index -->
-				<li class="lv-small">
-					<a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-
-						<!-- IF topics.teaser.user.picture -->
-						<img title="{topics.teaser.user.username}" class="user-picture" src="{topics.teaser.user.picture}" />
-						<!-- ELSE -->
-						<span title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
-						<!-- ENDIF topics.teaser.user.picture -->
-
-					</a>
-					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]
-					</a>
-				</li>
-				<!-- ENDIF topics.teaser.index -->
-				<!-- IF !topics.teaser.index -->
-				<li class="lv-small">[[category:no_replies]]</li>
-				<!-- ENDIF !topics.teaser.index -->
-				<!-- ENDIF topics.unreplied -->
-                </ul>
-            </div>
 		</div>
 	</div>
 	<!-- END topics -->
