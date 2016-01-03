@@ -290,13 +290,21 @@
 			}
 		}
 
-		.deleted {
-			opacity: 0.5;
-
+		.deleted .post-content {
+			//opacity: 0.5; this will change z-index
+			background-color: rgba(255,255,255,0.4);
+			color: rgba(0, 0, 0, 0.4);
+			
 			a {
 				cursor: default;
 			}
+			
+			&:after {
+				border: none;
+			}
 		}
+		
+		
 
 		.user-picture {
 			width: 40px;

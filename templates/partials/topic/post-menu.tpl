@@ -3,21 +3,21 @@
 	<ul class="dropdown-menu pull-right">
 		<!-- IF posts.display_moderator_tools -->
 		<li class="tools-title">[[topic:tools]]</li>
-		<li><a component="post/edit" href="#"><i class="fa fa-pencil"></i> [[topic:edit]]</a></li>
-		<li><a component="post/delete" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->"><i class="fa fa-trash-o"></i> [[topic:delete]]</a></li>
-		<li><a component="post/restore" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-history"></i> [[topic:restore]]</a></li>
-		<li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-eraser"></i> [[topic:purge]]</a></li>
+		<li><a component="post/edit" href="#"><i class="fa fa-fw fa-pencil"></i> [[topic:edit]]</a></li>
+		<li><a component="post/delete" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->"><i class="fa fa-fw fa-trash-o"></i> [[topic:delete]]</a></li>
+		<li><a component="post/restore" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-fw fa-history"></i> [[topic:restore]]</a></li>
+		<li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-fw fa-eraser"></i> [[topic:purge]]</a></li>
 
 		<!-- BEGIN posts.tools -->
 		<li>
 			<a component="{posts.tools.action}" href="#">
-				<i class="fa {posts.tools.icon}"></i> {{posts.tools.html}}
+				<i class="fa fa-fw {posts.tools.icon}"></i> {{posts.tools.html}}
 			</a>
 		</li>
 		<!-- END posts.tools -->
 
 		<!-- IF posts.display_move_tools -->
-		<li><a component="post/move" href="#"><i class="fa fa-arrows"></i> [[topic:move]]</a></li>
+		<li><a component="post/move" href="#"><i class="fa fa-fw fa-arrows"></i> [[topic:move]]</a></li>
 		<!-- ENDIF posts.display_move_tools -->
 		<li class="divider"></li>
 		<!-- ENDIF posts.display_moderator_tools -->
@@ -33,13 +33,13 @@
 		<!-- IF !config.disableSocialButtons -->
 		<li class="divider"></li>
 		<li class="tools-title">[[topic:share_this_post]]</li>
-		<li><a class="weibo-share" href="#"><i class="fa fa-weibo"></i> Weibo</a></li>
-		<li><a class="weixin-share" href="#"><i class="fa fa-weixin"></i> WeiXin</a></li>
-		<li><a class="qzone-share" href="#"><i class="fa fa-qq"></i> QZone</a></li>
-		<!--li><a class="ydnote-share" href="#"><i class="fa fa-pencil-square"></i> Youdao Note</a></li-->
-		<li><a class="facebook-share" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-		<li><a class="twitter-share" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-		<li><a class="google-share" href="#"><i class="fa fa-google-plus"></i> Google+</a></li>
+		<li><a class="weibo-share" href="#"><i class="fa fa-fw fa-weibo"></i> Weibo</a></li>
+		<li><a class="weixin-share" href="#"><i class="fa fa-fw fa-weixin"></i> WeiXin</a></li>
+		<li><a class="qzone-share" href="#"><i class="fa fa-fw fa-qq"></i> QZone</a></li>
+		<!--li><a class="ydnote-share" href="#"><i class="fa fa-fw fa-pencil-square"></i> Youdao Note</a></li-->
+		<li><a class="facebook-share" href="#"><i class="fa fa-fw fa-facebook"></i> Facebook</a></li>
+		<li><a class="twitter-share" href="#"><i class="fa fa-fw fa-twitter"></i> Twitter</a></li>
+		<li><a class="google-share" href="#"><i class="fa fa-fw fa-google-plus"></i> Google+</a></li>
 		<!-- ENDIF !config.disableSocialButtons -->
 
 		<li class="divider"></li>
