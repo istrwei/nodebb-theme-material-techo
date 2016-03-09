@@ -48,11 +48,10 @@
                         <!-- END authentication -->
                         <span>登陆</span>
                     <!-- ENDIF alternate_logins -->
+                    
+                    &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
                 </ul>
                 <!-- ENDIF allowRegistration -->
-                <!-- IF showResetLink -->
-                &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
-                <!-- ENDIF showResetLink -->
             </div>
 
         </div>
