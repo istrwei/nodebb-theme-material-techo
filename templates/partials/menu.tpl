@@ -31,16 +31,20 @@
         <li class="hidden-xs">
             <ul class="header-menu"> 
                 <!-- BEGIN navigation -->
-                <!-- IF function.displayMenuItem, @index -->
-                <li class="{navigation.class}">
-                    <a href="{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
-                        <!-- IF navigation.iconClass -->
-                        <i class="fa fa-fw {navigation.iconClass}"></i>
-                        <!-- ENDIF navigation.iconClass -->
-                    </a>
-                </li>
-                <!-- ENDIF function.displayMenuItem -->
-                <!-- END navigation -->
+					<!-- IF function.displayMenuItem, @index -->
+					<li class="{navigation.class}">
+						<a href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+							<!-- IF navigation.iconClass -->
+							<i class="fa fa-fw {navigation.iconClass}"></i>
+							<!-- ENDIF navigation.iconClass -->
+
+							<!-- IF navigation.text -->
+							<span class="{navigation.textClass}">{navigation.text}</span>
+							<!-- ENDIF navigation.text -->
+						</a>
+					</li>
+					<!-- ENDIF function.displayMenuItem -->
+					<!-- END navigation -->
             </ul>
         </li>
         <!-- ENDIF config.menuInHeader -->
