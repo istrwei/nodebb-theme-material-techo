@@ -1,0 +1,272 @@
+.groups {
+	.input-group {
+		#search-button {
+			padding-left: 0px;
+<<<<<<< HEAD
+=======
+			position: relative;
+		    left: -20px;
+		    z-index: 2;
+		    vertical-align: middle;
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		}
+	}
+
+	.fg-line {
+		padding-right: 0px;
+	}
+
+	&.list {
+		.members {
+			padding-left: 0;
+<<<<<<< HEAD
+
+			img {
+				width:32px;
+			}
+
+			.user-icon {
+				.user-icon-style(32px, 1.9rem, 50%);
+				line-height: 32px;
+				vertical-align: middle;
+=======
+			margin-bottom: 0px;
+
+			img {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+			}
+
+			li {
+				display: inline;
+			}
+		}
+
+		.group-cover {
+			min-height: 150px;
+		}
+
+		.list-cover:hover {
+			cursor: pointer;
+		}
+
+		.card-footer {
+			text-align: center;
+		}
+	}
+
+	&.details {
+<<<<<<< HEAD
+		.members, .pending, .invited {
+			img {
+				width: 32px;
+				height: 32px;
+			}
+
+			.user-icon {
+				.user-icon-style(32px, 1.9rem, 50%);
+			}
+=======
+		.members img, .pending img, .invited img {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			border-radius: 50%;
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		}
+	}
+}
+
+.group-details {
+	h2 {
+		margin-top: 0px;
+		font-size: 25px;
+	}
+
+	button, a {
+		margin-top: -30px;
+	}
+}
+
+[component="groups/activity"] {
+	&.card-body.card-padding {
+		padding-top: 0px;
+	}
+}
+
+.group-members, .members-invited {
+	.fg-line {
+		margin-bottom: 10px;
+	}
+}
+
+
+@media (max-width: @screen-xs-max) {
+	.row.groups .col-lg-8 {
+		margin-top: 10px;
+	}
+
+	.row.groups .col-xs-5 {
+		padding-right: 0px;
+<<<<<<< HEAD
+		padding-left: 0px;
+	}
+
+	.row.groups .col-xs-7 {
+		padding-left: 0px;
+	}
+=======
+  		padding-left: 0px;
+	}
+
+	.row.groups .col-xs-7 {
+  		padding-left: 0px;
+	}	
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+}
+
+[component="groups/container"] {
+	[component="groups/cover"] {
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 200px;
+		position: relative;
+		margin-bottom: 1em;
+
+		.change {
+			visibility: hidden;
+		}
+
+<<<<<<< HEAD
+
+
+		&:hover {
+			.controls {
+				.opacity(0.8);
+			}
+		}
+
+		.controls {
+			text-align: center;
+			min-height: 200px;
+			line-height: 200px;
+			.opacity(0);
+			.transition(opacity .15s linear);
+			cursor: pointer;
+			pointer-events: none;
+
+			> * {
+				pointer-events: all;
+			}
+
+			.fa {
+				color: white;
+				background-color: #333;
+				opacity: 1;
+				margin: 15px;
+				padding: 5px;
+			}
+		}
+
+=======
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		&.initialised:hover {
+			.change {
+				.opacity(1);
+				visibility: visible;
+			}
+		}
+
+		&.active {
+			&:hover {
+				cursor: move;
+			}
+
+			.instructions {
+				.opacity(1);
+			}
+
+<<<<<<< HEAD
+			.controls {
+				> * {
+					display: none;
+				}
+			}
+
+=======
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+			.change {
+				display: none;
+			}
+
+			.save {
+				display: inline-block;
+			}
+		}
+
+		&.saving {
+			.save {
+				display: none;
+			}
+
+			.indicator {
+				display: inline-block;
+			}
+		}
+
+<<<<<<< HEAD
+		.save, .indicator {
+=======
+		.change, .save, .indicator {
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+<<<<<<< HEAD
+=======
+		.change {
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: none;
+		}
+<<<<<<< HEAD
+=======
+
+		.instructions {
+			display: inline-block;
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			margin-top: 2em;
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+	}
+}

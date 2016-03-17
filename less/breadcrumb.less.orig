@@ -1,0 +1,16 @@
+.breadcrumb {
+	border:1px solid #E5E5E5;
+	border-radius:0;
+	margin-bottom:15px;
+	font-size:13px;
+<<<<<<< HEAD
+	word-break: break-all;
+=======
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+}
+
+@media (min-width: @screen-sm-min) {
+	.breadcrumb {
+		padding:10px 20px 11px;
+	}
+}

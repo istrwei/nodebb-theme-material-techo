@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<div id="{alert_id}" class="alert alert-dismissable alert-{type} clearfix" component="toaster/toast">
+=======
+<div id="{alert_id}" class="alert alert-dismissable alert-{type} clearfix">
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+	<!-- IF image -->
+	<img src="{image}">
+	<!-- ENDIF image -->
+
+	<!-- IF title -->
+	<strong>{title}</strong>
+	<!-- ENDIF title -->
+
+	<!-- IF message -->
+	<p>{message}</p>
+	<!-- ENDIF message -->
+</div>

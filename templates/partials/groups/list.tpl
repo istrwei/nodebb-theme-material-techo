@@ -5,21 +5,18 @@
             <div>{groups.displayName}</div>
             <small>{groups.description}</small>
         </div>
-        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url}); background-size: 100%; background-repeat: no-repeat; background-position: {groups.cover:position};<!-- ENDIF groups.cover:url -->">
+        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
         </div>
         <div class="card-body card-padding">
             <ul class="members">
                 <!-- BEGIN members -->
                 <li>
                     <a href="{config.relative_path}/user/{groups.members.userslug}">
-                        <!--img src="{groups.members.picture}" title="{groups.members.userslug}" /-->
-
                         <!-- IF groups.members.picture -->
-        									<img src="{groups.members.picture}" />
-          						 	<!-- ELSE -->
-          								<div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
-        	  						<!-- ENDIF groups.members.picture -->
-
+                        <img src="{groups.members.picture}" title="{groups.members.userslug}" />
+                        <!-- ELSE -->
+                        <div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
+                        <!-- ENDIF groups.members.picture -->
                     </a>
                 </li>
                 <!-- END members -->

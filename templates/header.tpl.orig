@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="{defaultLang}">
+=======
+<html lang="{function.localeToHTML, defaultLang}">
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+<head>
+	<title>{browserTitle}</title>
+	<!-- BEGIN metaTags -->
+	{function.buildMetaTag}
+	<!-- END metaTags -->
+	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
+<<<<<<< HEAD
+	<!-- IF bootswatchCSS --><link href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
+=======
+	<!-- IF bootswatchCSS --><link id="bootswatchCSS" href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
+
+	<!--[if lt IE 9]>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<<<<<<< HEAD
++  		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+=======
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+  		<script>__lt_ie_9__ = 1;</script>
+	<![endif]-->
+
+	<script>
+		var RELATIVE_PATH = "{relative_path}";
+		var config = JSON.parse('{{configJSON}}');
+		var app = {
+			template: "{template.name}",
+			user: JSON.parse('{{userJSON}}')
+		};
+	</script>
+	<script src="{relative_path}/nodebb.min.js?{config.cache-buster}"></script>
+	<!-- IMPORT partials/requirejs-config.tpl -->
+<<<<<<< HEAD
+=======
+	
+	<!-- BEGIN scripts -->
+ 	<script type="text/javascript" src="{scripts.src}"></script>
+ 	<!-- END scripts -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+
+	<!-- IF useCustomJS -->
+	{{customJS}}
+ 	<!-- ENDIF useCustomJS -->
+	<!-- IF useCustomCSS -->
+	<style type="text/css">{{customCSS}}</style>
+	<!-- ENDIF useCustomCSS -->
+</head>
+
+<body>
+<<<<<<< HEAD
+    <!-- IMPORT partials/menu.tpl -->
+
+	<div class="container" id="content" component="header">
+	<!-- IMPORT partials/noscript/warning.tpl -->
+=======
+	
+    <!-- IMPORT partials/menu.tpl -->
+
+	<div class="container" id="content">
+	<!-- IMPORT partials/noscript/warning.tpl -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533

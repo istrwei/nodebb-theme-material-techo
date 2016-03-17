@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+
+<!-- IMPORT partials/account_menu.tpl -->
+
+<div class="favourites">
+	<!-- IF !posts.length -->
+		<div class="alert alert-warning">[[topic:favourites.has_no_favourites]]</div>
+	<!-- ELSE -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<!-- IMPORT partials/posts_list.tpl -->
+			</div>
+		</div>
+	</div>
+	<!-- ENDIF !posts.length -->
+
+	<!-- IF config.usePagination -->
+		<!-- IMPORT partials/paginator.tpl -->
+	<!-- ENDIF config.usePagination -->
+
+</div>
+=======
+<!-- IMPORT account/posts.tpl -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533

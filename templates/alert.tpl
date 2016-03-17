@@ -1,4 +1,4 @@
-<div id="{alert_id}" class="alert alert-dismissable alert-{type} clearfix" component="toaster/toast">
+<div id="{alert_id}" class="alert alert-dismissable alert-{type} clearfix">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
 	<!-- IF image -->

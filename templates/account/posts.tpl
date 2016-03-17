@@ -1,13 +1,17 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
-<!-- IMPORT partials/account_menu.tpl -->
+<div class="account favourites">
+	<!-- IMPORT partials/account/header.tpl -->
 
-<div class="favourites">
 	<!-- IF !posts.length -->
-		<div class="alert alert-warning">[[user:has_no_posts]]</div>
+		<div class="alert alert-warning">{noItemsFoundKey}</div>
 	<!-- ELSE -->
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card">
+				<div class="card-header ch-alt">
+					<i class="fa fa-fw fa-pencil"></i> {title}
+				</div>
 				<!-- IMPORT partials/posts_list.tpl -->
 			</div>
 		</div>

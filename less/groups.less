@@ -2,6 +2,10 @@
 	.input-group {
 		#search-button {
 			padding-left: 0px;
+			position: relative;
+		    left: -20px;
+		    z-index: 2;
+		    vertical-align: middle;
 		}
 	}
 
@@ -12,15 +16,12 @@
 	&.list {
 		.members {
 			padding-left: 0;
+			margin-bottom: 0px;
 
 			img {
-				width:32px;
-			}
-
-			.user-icon {
-				.user-icon-style(32px, 1.9rem, 50%);
-				line-height: 32px;
-				vertical-align: middle;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
 			}
 
 			li {
@@ -42,15 +43,11 @@
 	}
 
 	&.details {
-		.members, .pending, .invited {
-			img {
-				width: 32px;
-				height: 32px;
-			}
-
-			.user-icon {
-				.user-icon-style(32px, 1.9rem, 50%);
-			}
+		.members img, .pending img, .invited img {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			border-radius: 50%;
 		}
 	}
 }
@@ -86,12 +83,12 @@
 
 	.row.groups .col-xs-5 {
 		padding-right: 0px;
-		padding-left: 0px;
+  		padding-left: 0px;
 	}
 
 	.row.groups .col-xs-7 {
-		padding-left: 0px;
-	}
+  		padding-left: 0px;
+	}	
 }
 
 [component="groups/container"] {
@@ -104,36 +101,6 @@
 
 		.change {
 			visibility: hidden;
-		}
-
-
-
-		&:hover {
-			.controls {
-				.opacity(0.8);
-			}
-		}
-
-		.controls {
-			text-align: center;
-			min-height: 200px;
-			line-height: 200px;
-			.opacity(0);
-			.transition(opacity .15s linear);
-			cursor: pointer;
-			pointer-events: none;
-
-			> * {
-				pointer-events: all;
-			}
-
-			.fa {
-				color: white;
-				background-color: #333;
-				opacity: 1;
-				margin: 15px;
-				padding: 5px;
-			}
 		}
 
 		&.initialised:hover {
@@ -150,12 +117,6 @@
 
 			.instructions {
 				.opacity(1);
-			}
-
-			.controls {
-				> * {
-					display: none;
-				}
 			}
 
 			.change {
@@ -177,7 +138,7 @@
 			}
 		}
 
-		.save, .indicator {
+		.change, .save, .indicator {
 			display: inline-block;
 			position: absolute;
 			top: 1em;
@@ -193,12 +154,31 @@
 			}
 		}
 
+		.change {
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+
 		.save {
 			display: none;
 		}
 
 		.indicator {
 			display: none;
+		}
+
+		.instructions {
+			display: inline-block;
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			margin-top: 2em;
+			.opacity(0);
+			.transition(opacity .15s linear);
 		}
 	}
 }

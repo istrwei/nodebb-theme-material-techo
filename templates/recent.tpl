@@ -1,10 +1,10 @@
 <div class="recent">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
+		
 	<a href="{config.relative_path}/recent">
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
-
+    
     <div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">

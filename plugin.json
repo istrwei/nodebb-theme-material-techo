@@ -1,9 +1,6 @@
 {
 	"id": "nodebb-theme-material-techo",
 	"library": "./lib/theme.js",
-	"staticDirs": {
-	    "fonts": "./fonts"
-	  },
 	"hooks": [
 		{
 			"hook": "static:app.load", "method": "init"
@@ -31,5 +28,6 @@
 		"lib/material.js",
 		"lib/vendor/waves.min.js",
 		"lib/vendor/nprogress.js"
-	]
+	],
+	"templates": "./templates"
 }

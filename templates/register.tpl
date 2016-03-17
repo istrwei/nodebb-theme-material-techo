@@ -6,8 +6,7 @@
 
 <div class="register">
     <div class="register-block">
-        <div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify">
             [[error:registration-error]]
             <p>{error}</p>
         </div>
@@ -15,7 +14,7 @@
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="text" name="email" id="email" autocorrect="off" autocapitalize="off" />
+                <input class="form-control" type="email" name="email" id="email" autocorrect="off" autocapitalize="off" />
             </div>
             <label class="fg-label">[[register:email_address_placeholder]]</label>
             <span class="input-group-addon">
@@ -33,7 +32,7 @@
                 <span id="username-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-
+        
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
@@ -44,7 +43,7 @@
                 <span id="password-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-
+        
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
@@ -55,7 +54,7 @@
                 <span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
-
+        
         <!-- BEGIN regFormEntry -->
         <div class="input-group">
             <div id="register-{regFormEntry.styleName}">
@@ -75,20 +74,18 @@
         </div>
         <!-- ENDIF termsOfUse -->
         <button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
-        <!-- IF alternate_logins -->
-        <div class="register-options">
-            <ul class="alternate-auth">
-                <span>使用</span>
-            <!-- BEGIN authentication -->
-            <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
-            <!-- END authentication -->
-            <span>登陆</span>
-            </ul>
-        </div>
-        <!-- ENDIF alternate_logins -->
         <input id="referrer" type="hidden" name="referrer" value="" />
         <input id="token" type="hidden" name="token" value="" />
         </form>
     </div>
 
+    <!-- IF alternate_logins -->
+    <div class="register-options">
+        <ul class="alternate-auth">
+        <!-- BEGIN authentication -->
+        <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
+        <!-- END authentication -->
+        </ul>
+    </div>
+    <!-- ENDIF alternate_logins -->
 </div>

@@ -1,0 +1,52 @@
+<!-- BEGIN groups -->
+<div class="col-lg-4 col-md-6 col-sm-12" data-slug="{groups.slug}">
+    <div class="card">
+        <div class="card-header ch-alt">
+            <div>{groups.displayName}</div>
+            <small>{groups.description}</small>
+        </div>
+<<<<<<< HEAD
+        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url}); background-size: 100%; background-repeat: no-repeat; background-position: {groups.cover:position};<!-- ENDIF groups.cover:url -->">
+=======
+        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+        </div>
+        <div class="card-body card-padding">
+            <ul class="members">
+                <!-- BEGIN members -->
+                <li>
+                    <a href="{config.relative_path}/user/{groups.members.userslug}">
+<<<<<<< HEAD
+                        <!--img src="{groups.members.picture}" title="{groups.members.userslug}" /-->
+
+                        <!-- IF groups.members.picture -->
+        									<img src="{groups.members.picture}" />
+          						 	<!-- ELSE -->
+          								<div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
+        	  						<!-- ENDIF groups.members.picture -->
+
+=======
+                        <!-- IF groups.members.picture -->
+                        <img src="{groups.members.picture}" title="{groups.members.userslug}" />
+                        <!-- ELSE -->
+                        <div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
+                        <!-- ENDIF groups.members.picture -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+                    </a>
+                </li>
+                <!-- END members -->
+                <!-- IF groups.truncated -->
+                <li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
+                <!-- ENDIF groups.truncated -->
+            </ul>
+        </div>
+        <div class="card-footer">
+            {groups.memberCount} member(s)
+        </div>
+    </div>
+</div>
+<<<<<<< HEAD
+<!-- END groups -->
+=======
+<!-- END groups -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533

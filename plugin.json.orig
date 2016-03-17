@@ -1,0 +1,50 @@
+{
+<<<<<<< HEAD
+	"id": "nodebb-theme-material-techo",
+	"library": "./lib/theme.js",
+	"staticDirs": {
+	    "fonts": "./fonts"
+	  },
+=======
+	"id": "nodebb-theme-material",
+	"library": "./lib/theme.js",
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+	"hooks": [
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:config.get", "method": "getConfig"
+<<<<<<< HEAD
+		},
+		{
+			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
+		},
+		{
+			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
+		},
+		{
+			"hook": "filter:widget.render:material_recent", "method": "renderMaterialRecent"
+		},
+		{
+			"hook": "filter:widget.render:material_cate_sidebar", "method": "renderMaterialCategoriesSidebar"
+=======
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		}
+	],
+	"scripts": [
+		"lib/material.js",
+<<<<<<< HEAD
+		"lib/vendor/waves.min.js",
+		"lib/vendor/nprogress.js"
+	]
+}
+=======
+		"lib/vendor/waves.min.js"
+	],
+	"templates": "./templates"
+}
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533

@@ -1,0 +1,76 @@
+<!-- BEGIN users -->
+<li class="users-box registered-user" data-uid="{users.uid}">
+	<a href="{config.relative_path}/user/{users.userslug}">
+<<<<<<< HEAD
+
+		<!-- IF users.picture -->
+			<img src="{users.picture}" class="user-picture" title="{users.username}"/>
+		<!-- ELSE -->
+			<div class="user-icon" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
+		<!-- ENDIF users.picture -->
+
+	</a>
+	<br/>
+	<div class="user-info">
+		<span>
+			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
+			<a href="{config.relative_path}/user/{users.userslug}"> {users.username}</a>
+		</span>
+		<br/>
+
+		<!-- IF route_users:joindate -->
+		<div title="joindate" class="joindate">
+			<i class='fa fa-clock'></i>
+			<span class='timeago' title="{users.joindateISO}"></span>
+=======
+		<!-- IF users.picture -->
+		<img class="user-picture" src="{users.picture}" />
+		<!-- ELSE -->
+		<div class="user-icon user-picture" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
+		<!-- ENDIF users.picture -->
+	</a>
+	<br/>
+	<div class="user-info">
+		<div>
+			<i component="user/status" class="status {users.status}" title="[[global:{users.status}]]"></i>
+			<a href="{config.relative_path}/user/{users.userslug}"> {users.username}</a>
+		</div>
+
+		<!-- IF route_users:joindate -->
+		<div title="joindate" class="joindate">
+			<i class="fa fa-clock"></i>
+			<span class="timeago" title="{users.joindateISO}"></span>
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		</div>
+		<!-- ENDIF route_users:joindate -->
+
+		<!-- IF route_users:reputation -->
+		<div title="reputation" class="reputation">
+<<<<<<< HEAD
+			<i class='fa fa-star'></i>
+			<span class='formatted-number'>{users.reputation}</span>
+=======
+			<i class="fa fa-star"></i>
+			<span class="formatted-number">{users.reputation}</span>
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		</div>
+		<!-- ENDIF route_users:reputation -->
+
+		<!-- IF route_users:postcount -->
+		<div title="post count" class="post-count">
+<<<<<<< HEAD
+			<i class='fa fa-pencil'></i>
+			<span class='formatted-number'>{users.postcount}</span>
+=======
+			<i class="fa fa-pencil"></i>
+			<span class="formatted-number">{users.postcount}</span>
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533
+		</div>
+		<!-- ENDIF route_users:postcount -->
+	</div>
+</li>
+<<<<<<< HEAD
+<!-- END users -->
+=======
+<!-- END users -->
+>>>>>>> 66a1cb4078e0276e4051f91f0b4f4d2ff9aec533

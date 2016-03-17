@@ -5,7 +5,7 @@
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
 			<div class="lv-title">
-				[[global:subcategories]]
+				[[category:subcategories]]
 			</div>
 			</div>
 			<div class="lv-body">
@@ -26,7 +26,7 @@
 							<small class="lv-small">{children.description}</small>
 			    		</div>
 			    		<!-- IF !children.link -->
-			    		<div class="lv-actions">
+			    		<div class="lv-actions hidden-xs hidden-sm">
 			    			<ul>
 			    				<li>
 			    					{children.topic_count}
@@ -48,54 +48,3 @@
 	<!-- ENDIF children.length -->
 </div>
 <!-- ENDIF !config.subCategoriesAsCards -->
-
-<!-- IF config.subCategoriesAsCards -->
-<!-- IF children.length -->
-<div class="row">
-	<!-- BEGIN children -->
-	<div class="<!-- IF children.class -->{children.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF children.class -->">
-		<div class="new-card" style="{function.generateCategoryBackground}">
-			<a href="<!-- IF children.link -->{children.link}<!-- ELSE -->{config.relative_path}/category/{children.slug}<!-- ENDIF children.link-->" itemprop="url" <!-- IF children.link -->target="_blank"<!-- ENDIF children.link-->>
-				<div class="new-card-body">
-					<ul class="category-counts pull-right">
-	                    <li>
-	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{children.totalTopicCount}"></span>
-	                    </li>
-	                    <li>
-	                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{children.totalPostCount}"></span>
-	                    </li>
-	                </ul>
-					<h4>
-						{children.name} <!-- IF children.icon -->
-								<i class="fa {children.icon} fa-fw"></i>
-								<!-- ENDIF children.icon -->
-					</h4>
-					<small>{children.description}</small>
-				</div>
-			</a>
-			<div class="new-card-footer">
-				<!-- BEGIN posts -->
-				<div component="category/posts">
-					<div class="pull-left hidden-xs user-avatar">
-				    	<a href="{config.relative_path}/user/{children.posts.user.userslug}">
-
-									<!-- IF children.posts.user.picture -->
-										<img src="{children.posts.user.picture}" class="user-picture" title="{children.posts.user.username}"/>
-									<!-- ELSE -->
-										<div class="user-icon" style="background-color: {children.posts.user.icon:bgColor};">{children.posts.user.icon:text}</div>
-									<!-- ENDIF children.posts.user.picture -->
-
-							</a>
-					</div>
-					<div class="topic-title">
-						<a href="{config.relative_path}/topic/{children.posts.topic.slug}">{children.posts.topic.title}</a>
-					</div>
-				</div>
-				<!-- END posts -->
-			</div>
-		</div>
-	</div>
-	<!-- END children -->
-</div>
-<!-- ENDIF children.length -->
-<!-- ENDIF config.subCategoriesAsCards -->

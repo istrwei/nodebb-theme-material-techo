@@ -3,21 +3,11 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4>[[topic:move_topic]]</h4>
+				<h3>[[topic:move_topic]]</h3>
 			</div>
 			<div class="modal-body">
-				<!--p id="categories-loading"><i class="fa fa-spin fa-refresh"></i> [[topic:load_categories]]</p-->
-				<ul class="category-list">
-					<!-- BEGIN categories -->
-					<li style="
-							<!-- IF categories.bgColor -->background-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
-							<!-- IF categories.color -->color: {categories.color};<!-- ENDIF categories.color -->
-						"
-						class="<!-- IF categories.disabled -->disabled<!-- ENDIF categories.disabled -->"
-						data-cid="{categories.cid}"
-					><i class="fa fa-fw {categories.icon}"></i> {categories.name}</li>
-					<!-- END categories -->
-				</ul>
+				<!-- IMPORT partials/category_list.tpl -->
+
 				<p>
 					[[topic:disabled_categories_note]]
 				</p>
