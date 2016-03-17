@@ -1,10 +1,10 @@
 <!-- IF posts.display_moderator_tools -->
 <li class="tools-title">[[topic:tools]]</li>
-<li><a component="post/edit" href="#"><i class="fa fa-pencil"></i> [[topic:edit]]</a></li>
-<li><a component="post/delete" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->"><i class="fa fa-trash-o"></i> [[topic:delete]]</a></li>
-<li><a component="post/restore" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-history"></i> [[topic:restore]]</a></li>
-<li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-eraser"></i> [[topic:purge]]</a></li>
-<li><a component="topic/delete/posts" href="#"><i class="fa fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
+<li><a component="post/edit" href="#"><i class="fa fa-fw fa-pencil"></i> [[topic:edit]]</a></li>
+<li><a component="post/delete" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->"><i class="fa fa-fw fa-trash-o"></i> [[topic:delete]]</a></li>
+<li><a component="post/restore" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-fw fa-history"></i> [[topic:restore]]</a></li>
+<li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-fw fa-eraser"></i> [[topic:purge]]</a></li>
+<li><a component="topic/delete/posts" href="#"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
 
 <!-- BEGIN posts.tools -->
 <li>
@@ -35,7 +35,7 @@
 <!-- ENDIF postSharing.length -->
 <!-- BEGIN postSharing -->
 <li role="presentation">
-	<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa {postSharing.class}"></i></span> {postSharing.name}</a>
+	<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
 </li>
 <!-- END postSharing -->
 

@@ -59,13 +59,14 @@
                             </strong>
                             <!-- IMPORT partials/topic/badge.tpl -->
                             <span class="post-time">
-                                [[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
+                            <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 
                                 <span class="post-tools">
                                     <a component="post/reply" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
                                     <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
-                                    <a href="/topic/{slug}"><i class="fa fa-link"></i> 链接</a>
                                 </span>
+                                
+                            </span>
                             </span>
                             <ul class="lv-actions actions hidden-xs" id="browsing-users">
                                 <li>
@@ -94,7 +95,7 @@
                     <div component="post/signature" data-uid="{posts.user.uid}" class="post-signature hidden-xs">{posts.user.signature}</div>
                     <!-- ENDIF posts.user.signature -->
 
-                    <small component="post/editor" class="pull-right post-edit <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->">[[global:last_edited_by_ago, <strong><a href="{config.relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
+                    <small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.relativeEditTime}"></span></small>
                 </div>
 
             </div>

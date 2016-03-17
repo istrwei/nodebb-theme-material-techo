@@ -103,6 +103,36 @@
 			visibility: hidden;
 		}
 
+
+
+		&:hover {
+			.controls {
+				.opacity(0.8);
+			}
+		}
+
+		.controls {
+			text-align: center;
+			min-height: 200px;
+			line-height: 200px;
+			.opacity(0);
+			.transition(opacity .15s linear);
+			cursor: pointer;
+			pointer-events: none;
+
+			> * {
+				pointer-events: all;
+			}
+
+			.fa {
+				color: white;
+				background-color: #333;
+				opacity: 1;
+				margin: 15px;
+				padding: 5px;
+			}
+		}
+
 		&.initialised:hover {
 			.change {
 				.opacity(1);
@@ -117,6 +147,12 @@
 
 			.instructions {
 				.opacity(1);
+			}
+
+			.controls {
+				> * {
+					display: none;
+				}
 			}
 
 			.change {

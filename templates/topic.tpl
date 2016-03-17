@@ -4,28 +4,17 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="listview lv-lg">
-					<div class="lv-header-alt" component="post/header" itemprop="name">
-						<div class="title">
-							<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
-							<ul class="lv-actions actions">
-								<!-- IMPORT partials/topic/sort.tpl -->
-								<li>
-								    <span component="topic/follow" class="<!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">
-										<i class="fa fa-eye-slash"></i>
-									</span>
-
-									<span component="topic/unfollow" class="<!-- IF !isFollowing -->hidden<!-- ENDIF !isFollowing -->">
-										<i class="fa fa-eye"></i>
-									</span>
-								</li>
-							</ul>
-						</div>
-					</div>
 
 					<div class="lv-body" component="topic" data-tid="{tid}">
-						<!-- BEGIN posts -->
-							<!-- IMPORT partials/topic/post.tpl -->
-						<!-- END posts -->
+                        
+						    <!-- BEGIN posts -->
+							<!-- IF !posts.index -->
+								<!-- IMPORT partials/topic/main-post.tpl -->
+							<!-- ENDIF !posts.index -->
+							<!-- IF posts.index -->
+								<!-- IMPORT partials/topic/post.tpl -->
+							<!-- ENDIF posts.index -->
+							<!-- END posts -->
 
 						<div class="post-bar">
 							<!-- IMPORT partials/post_bar.tpl -->

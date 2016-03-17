@@ -46,7 +46,6 @@
 
 	>li {
 		display: inline-block;
-		vertical-align: -webkit-baseline-middle;
 
 		@media (max-width: @screen-xs-max) {
 			position: static!important;
@@ -74,12 +73,20 @@
 }
 
 .top-menu {
-	list-style: none;
-	padding: 3px;
+	list-style:none;
+	padding-right: 35px;
+	line-height: 65px;
+
+	button {
+		margin-top: -1px;
+	}
+
+	div {
+		vertical-align: middle;
+	}
 
 	>li {
 		display: inline-block;
-		vertical-align: -webkit-baseline-middle;
 
 		@media (max-width: @screen-xs-max) {
 			position: static!important;
@@ -251,7 +258,6 @@
 }
 
 .pagination-block {
-	margin-top: 5px;
 	margin-right: 15px;
 	transition: opacity 250ms ease-in;
 	opacity: 0;
@@ -269,7 +275,7 @@
 	.progress-container {
 		height: 2px;
 		position: absolute;
-		bottom: -5px;
+		bottom: 10px;
 		left: 8px;
 		background: #666;
 		width: 90%;
