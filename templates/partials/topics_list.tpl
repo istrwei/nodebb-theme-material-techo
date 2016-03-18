@@ -52,7 +52,7 @@
             <!-- IF !template.category -->
             <small class="lv-small">
 				<span class="hidden-xs">[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | </span>
-				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> 
+				<strong>{topics.user.username}</strong>
                 
                 <small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span></small>
 				<small class="visible-xs-inline">
@@ -62,6 +62,8 @@
 					<span class="timeago" title="{topics.timestampISO}"></span>
 					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
+                
+                 <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> 
                 
 			</small>
             <!-- ENDIF !template.category -->
