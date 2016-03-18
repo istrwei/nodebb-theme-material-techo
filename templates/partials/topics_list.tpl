@@ -45,7 +45,7 @@
 				<!-- ELSE -->
 				<strong>[[global:guest]]</strong>
 				<!-- ENDIF topics.user.uid -->
-				<span class="timeago" title="{topics.relativeTime}"></span>
+				<span class="timeago" title="{topics.timestampISO}"></span>
 			</small>
             <!-- ENDIF template.category -->
 
