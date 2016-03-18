@@ -1,8 +1,7 @@
 <div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
     <meta itemprop="itemListOrder" content="descending">
     <!-- BEGIN topics -->
-    <div component="category/topic" class="lv-item media row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl
-    -->>
+    <div component="category/topic" class="lv-item media row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
         <meta itemprop="name" content="{function.stripTags, title}">
         <!-- IF showSelect -->
         <div class="checkbox pull-left" component="topic/select">
