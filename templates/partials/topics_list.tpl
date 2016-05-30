@@ -6,7 +6,7 @@
 		<!-- IF showSelect -->
         <div class="checkbox pull-left" component="topic/select">
             <label>
-                <input type="checkbox" class="select">
+                <div class="select"></div>
                 <i class="input-helper"></i>
             </label>
         </div>
@@ -30,7 +30,7 @@
     			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
 				<!-- IF !topics.noAnchor -->
-				<a href="{config.relative_path}/topic/{topics.slug}"><span class="topic-title">{topics.title}</span></a>
+				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->"><span class="topic-title">{topics.title}</span></a>
 				<!-- ELSE -->
 				<span class="topic-title">{topics.title}</span>
 				<!-- ENDIF !topics.noAnchor -->
@@ -51,19 +51,7 @@
 			<!-- IF !template.category -->
 			<small class="lv-small">
 				<span class="hidden-xs">[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | </span>
-				<strong>{topics.user.username}</strong>
-                
-                <small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span></small>
-				<small class="visible-xs-inline">
-					<!-- IF topics.teaser.timestamp -->
-					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
-					<!-- ELSE -->
-					<span class="timeago" title="{topics.timestampISO}"></span>
-					<!-- ENDIF topics.teaser.timestamp -->
-				</small>
-                
-                 <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> 
-                
+				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF !template.category -->
 			
@@ -80,28 +68,27 @@
 
 			<div class="lv-actions actions hidden-xs">
                 <ul>
-                    <!-- IF topics.unreplied -->
-                    <li class="lv-small">[[category:no_replies]]</li>
-                    <!-- ELSE -->
-                    <!-- IF topics.teaser.index -->
-                    <li class="lv-small">
-                        <a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-                            <!-- IF topics.teaser.user.picture -->
-                            <img src="{topics.teaser.user.picture}" class="user-picture" title="{topics.teaser.user.username}" />
-                            <!-- ELSE -->
-                            <div class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</div>
-                            <!-- ENDIF topics.teaser.user.picture -->
-                        </a>
-
-                    <a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+                <!-- IF topics.unreplied -->
+				<li class="lv-small">[[category:no_replies]]</li>
+				<!-- ELSE -->
+				<!-- IF topics.teaser.index -->
+				<li class="lv-small">
+					<a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
+						<!-- IF topics.teaser.user.picture -->
+		                <img src="{topics.teaser.user.picture}" class="user-picture" title="{topics.teaser.user.username}" />
+		                <!-- ELSE -->
+		                <div class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</div>
+		                <!-- ENDIF topics.teaser.user.picture -->
+					</a>
+					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
-                    </li>
-                    <!-- ENDIF topics.teaser.index -->
-                    <!-- IF !topics.teaser.index -->
-                    <li class="lv-small">[[category:no_replies]]</li>
-                    <!-- ENDIF !topics.teaser.index -->
-                    <!-- ENDIF topics.unreplied -->
+				</li>
+				<!-- ENDIF topics.teaser.index -->
+				<!-- IF !topics.teaser.index -->
+				<li class="lv-small">[[category:no_replies]]</li>
+				<!-- ENDIF !topics.teaser.index -->
+				<!-- ENDIF topics.unreplied -->
                 </ul>
             </div>
 		</div>
